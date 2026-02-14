@@ -32,6 +32,7 @@ const PokeDex = () =>{
             type="text" value={input} placeholder="Search for pokemon" onChange={(e) => setinput(e.target.value)}/><br></br>
             <button onClick={handleSearch}>Search</button>
         </>
+        
     )
 }
 
