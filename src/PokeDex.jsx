@@ -38,7 +38,7 @@ const PokeDex = () => {
 }, [searchTerm]);
   return (
     <>
-    {loading && <p>Loading...</p>}
+    {loading && <img src="/loading.gif" style={{width: "200px"}}/>}
 
     {error && !loading && (
         <div>
