@@ -1,4 +1,4 @@
-/*body {
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to right, #f12711, #f5af19);
@@ -67,9 +67,9 @@ button:hover {
   text-align: center;
   color: white;
 }
-*/
+
 /* Import a more interesting font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -80,7 +80,7 @@ button:hover {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  /* Enhanced gradient with animation */
+
   background: linear-gradient(135deg, #f12711, #f5af19, #ff8c42, #f12711);
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
@@ -89,14 +89,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated gradient background */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Add subtle texture overlay */
+
 body::before {
   content: '';
   position: fixed;
@@ -139,7 +138,7 @@ h1 {
   font-weight: 800;
   text-align: center;
   margin-bottom: 20px;
-  /* Enhanced text shadow for depth */
+
   text-shadow: 
     3px 3px 0px rgba(0, 0, 0, 0.2),
     6px 6px 0px rgba(0, 0, 0, 0.1),
@@ -181,7 +180,7 @@ input {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   margin-top: 20px;
-  /* Enhanced styling */
+
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 
@@ -232,7 +231,7 @@ button {
   overflow: hidden;
 }
 
-/* Button shine effect */
+
 button::before {
   content: '';
   position: absolute;
@@ -270,7 +269,7 @@ button:active {
   text-align: center;
   width: 100%;
   max-width: 320px;
-  /* Enhanced shadow with multiple layers */
+
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(255, 255, 255, 0.1) inset;
@@ -280,7 +279,6 @@ button:active {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card shine effect */
 .card::before {
   content: '';
   position: absolute;
@@ -337,7 +335,7 @@ button:active {
   animation-play-state: paused;
 }
 
-/* Style for Pokemon name */
+
 .card h2 {
   margin-top: 20px;
   font-size: 1.8rem;
@@ -347,7 +345,7 @@ button:active {
   letter-spacing: 1px;
 }
 
-/* Style for Pokemon ID/stats */
+
 .card p {
   margin-top: 10px;
   font-size: 1rem;
@@ -377,7 +375,7 @@ button:active {
   75% { transform: translateX(10px); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -420,4 +418,4 @@ button:active {
   .card {
     max-width: 260px;
   }
-}
+}*/
