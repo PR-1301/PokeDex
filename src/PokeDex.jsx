@@ -5,6 +5,7 @@ const PokeDex = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const PokeDex = () => {
 
   const fetchPoke = async () => {
     setLoading(true);
-
+    setError(false);
     try {
       const res = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
@@ -26,7 +27,7 @@ const PokeDex = () => {
       setPokemon(data);
 
     } catch (err) {
-      console.error("Error fetching Pokemon");
+      setError(true)
       setPokemon(null);
     }
 
@@ -37,6 +38,18 @@ const PokeDex = () => {
 }, [searchTerm]);
   return (
     <>
+    {loading && <p>Loading...</p>}
+
+    {error && !loading && (
+        <div>
+            <img
+            src="/Poke-not.png"
+            alt="Pokemon not found"
+            style={{ width: "200px" }}
+            />
+        </div>
+    )}
+
       {pokemon && (
         <>
           <img
