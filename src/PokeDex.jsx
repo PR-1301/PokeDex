@@ -1,3 +1,4 @@
+import "./PokeDex.css"
 import { useEffect, useState } from "react";
 
 const PokeDex = () => {
@@ -37,11 +38,13 @@ const PokeDex = () => {
   fetchPoke();
 }, [searchTerm]);
   return (
-    <>
+
+    <div className="container">
+        <h1 className="title"><img src="/PokeDex-title.png" style={{width: "500px"}} /></h1>
     {loading && <img src="/loading.gif" style={{width: "200px"}}/>}
 
     {error && !loading && (
-        <div>
+        <div className="error">
             <img
             src="/Poke-not.png"
             alt="Pokemon not found"
@@ -50,14 +53,14 @@ const PokeDex = () => {
         </div>
     )}
 
-      {pokemon && (
-        <>
+      {pokemon && !loading && (
+        <div className="card">
           <img
             src={pokemon.sprites.front_default}
             width={200}
             height={"auto"}
           />
-        </>
+        </div>
       )}
       <form onSubmit={handleSearch}>
       <input
@@ -69,7 +72,7 @@ const PokeDex = () => {
       <br></br>
       <button type="submit">Search</button>
       </form>
-    </>
+    </div>
   );
 };
 
