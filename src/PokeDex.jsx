@@ -24,14 +24,13 @@ const PokeDex = () =>{
 
     return (
         <>
-            <input 
-            type="text" value={input} placeholder="Search for pokemon" onChange={(e) => setinput(e.target.value)}/>
-            <button onClick={handleSearch}>Search</button>
-
             {pokemon && 
             <>
-            <img src={pokemon.sprites.front_default}/>
+            <img src={pokemon.sprites.front_default} width={200} height={"auto"}/>
             </>}
+            <input 
+            type="text" value={input} placeholder="Search for pokemon" onChange={(e) => setinput(e.target.value)}/><br></br>
+            <button onClick={handleSearch}>Search</button>
         </>
     )
 }
