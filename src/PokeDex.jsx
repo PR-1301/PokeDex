@@ -6,7 +6,8 @@ const PokeDex = () => {
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     setSearchTerm(input);
   };
 
@@ -45,6 +46,7 @@ const PokeDex = () => {
           />
         </>
       )}
+      <form onSubmit={handleSearch}>
       <input
         type="text"
         value={input}
@@ -52,7 +54,8 @@ const PokeDex = () => {
         onChange={(e) => setinput(e.target.value)}
       />
       <br></br>
-      <button onClick={handleSearch}>Search</button>
+      <button type="submit">Search</button>
+      </form>
     </>
   );
 };
