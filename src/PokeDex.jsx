@@ -41,7 +41,7 @@ const PokeDex = () => {
 
     <div className="container">
         <h1 className="title"><img src="/PokeDex-title.png" style={{width: "500px"}} /></h1>
-    {loading && <img src="/loading.gif" style={{width: "200px"}}/>}
+    {loading && <img src="/loading.gif" style={{width: "100px"}}/>}
 
     {error && !loading && (
         <div className="error">
