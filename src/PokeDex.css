@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to right, #f12711, #f5af19);
@@ -66,10 +66,10 @@ button:hover {
 .error {
   text-align: center;
   color: white;
-}
+}*/
 
 /* Import a more interesting font */
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -418,4 +418,4 @@ button:active {
   .card {
     max-width: 260px;
   }
-}*/
+}
