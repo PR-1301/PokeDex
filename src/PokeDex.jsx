@@ -1,4 +1,4 @@
-import "./PokeDex.css"
+import "./PokeDex.css";
 import { useEffect, useState } from "react";
 
 const PokeDex = () => {
@@ -13,45 +13,45 @@ const PokeDex = () => {
     setSearchTerm(input);
   };
 
- useEffect(() => {
-  if (!searchTerm) return;
+  useEffect(() => {
+    if (!searchTerm) return;
 
-  const fetchPoke = async () => {
-    setLoading(true);
-    setError(false);
-    try {
-      const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
-      );
+    const fetchPoke = async () => {
+      setLoading(true);
+      setError(false);
+      try {
+        const res = await fetch(
+          `https://pokeapi.co/api/v2/pokemon/${searchTerm}`,
+        );
 
-      const data = await res.json();
-      setPokemon(data);
+        const data = await res.json();
+        setPokemon(data);
+      } catch (err) {
+        setError(true);
+        setPokemon(null);
+      }
 
-    } catch (err) {
-      setError(true)
-      setPokemon(null);
-    }
+      setLoading(false);
+    };
 
-    setLoading(false);
-  };
-
-  fetchPoke();
-}, [searchTerm]);
+    fetchPoke();
+  }, [searchTerm]);
   return (
-
     <div className="container">
-        <h1 className="title"><img src="/PokeDex-title.png" style={{width: "500px"}} /></h1>
-    {loading && <img src="/loading.gif" style={{width: "100px"}}/>}
+      <h1 className="title">
+        <img src="/PokeDex-title.png" style={{ width: "500px" }} />
+      </h1>
+      {loading && <img src="/loading.gif" style={{ width: "100px" }} />}
 
-    {error && !loading && (
+      {error && !loading && (
         <div className="error">
-            <img
+          <img
             src="/Poke-not.png"
             alt="Pokemon not found"
             style={{ width: "200px" }}
-            />
+          />
         </div>
-    )}
+      )}
 
       {pokemon && !loading && (
         <div className="card">
@@ -63,14 +63,14 @@ const PokeDex = () => {
         </div>
       )}
       <form onSubmit={handleSearch}>
-      <input
-        type="text"
-        value={input}
-        placeholder="Search for pokemon"
-        onChange={(e) => setinput(e.target.value)}
-      />
-      <br></br>
-      <button type="submit">Search</button>
+        <input
+          type="text"
+          value={input}
+          placeholder="Search for pokemon"
+          onChange={(e) => setinput(e.target.value)}
+        />
+        <br></br>
+        <button type="submit">Search</button>
       </form>
     </div>
   );
